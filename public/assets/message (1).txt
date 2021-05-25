@@ -1,0 +1,249 @@
+{
+    "message": "Invalid document structure: Property \"tokens\" has invalid input. Invalid document structure: Unknown properties are not allowed (countryCode, osCode, osName, osVersion, clientType, clientCode, clientName, clientVersion, clientEngine, clientEngineVersion, deviceName, deviceBrand, deviceModel) for this collection. Make sure to follow token collection structure",
+    "code": 0,
+    "version": "dev",
+    "file": "/usr/src/code/src/Appwrite/Database/Database.php",
+    "line": 289,
+    "trace": [
+        {
+            "file": "/usr/src/code/app/controllers/api/account.php",
+            "line": 216,
+            "function": "updateDocument",
+            "class": "Appwrite\\Database\\Database",
+            "type": "->",
+            "args": [
+                {
+                    "$id": "60691b6d8d45f",
+                    "$collection": "users",
+                    "$permissions": {
+                        "read": [
+                            "*"
+                        ],
+                        "write": [
+                            "user:{self}"
+                        ]
+                    },
+                    "email": "test@testme.com",
+                    "emailVerification": false,
+                    "status": 0,
+                    "password": "$2y$08$cgkT0xgWLqWFkNjTgtWPzuxK2F7ZADugbRjj6vspsY7e3u.jq8xn6",
+                    "passwordUpdate": 1617501037,
+                    "registration": 1617501037,
+                    "reset": false,
+                    "name": "test",
+                    "memberships": [
+                        {
+                            "$id": "60691baec48da",
+                            "$collection": "memberships",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f",
+                                    "team:60691baebdd94"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f",
+                                    "team:60691baebdd94/owner"
+                                ]
+                            },
+                            "userId": "60691b6d8d45f",
+                            "teamId": "60691baebdd94",
+                            "roles": [
+                                "owner"
+                            ],
+                            "invited": 1617501102,
+                            "joined": 1617501102,
+                            "confirm": true,
+                            "secret": ""
+                        },
+                        {
+                            "$id": "606961e262436",
+                            "$collection": "memberships",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f",
+                                    "team:606961e25bbf0"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f",
+                                    "team:606961e25bbf0/owner"
+                                ]
+                            },
+                            "userId": "60691b6d8d45f",
+                            "teamId": "606961e25bbf0",
+                            "roles": [
+                                "owner"
+                            ],
+                            "invited": 1617519074,
+                            "joined": 1617519074,
+                            "confirm": true,
+                            "secret": ""
+                        },
+                        {
+                            "$id": "606eba77842f7",
+                            "$collection": "memberships",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f",
+                                    "team:606eba77729b1"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f",
+                                    "team:606eba77729b1/owner"
+                                ]
+                            },
+                            "userId": "60691b6d8d45f",
+                            "teamId": "606eba77729b1",
+                            "roles": [
+                                "owner"
+                            ],
+                            "invited": 1617869431,
+                            "joined": 1617869431,
+                            "confirm": true,
+                            "secret": ""
+                        }
+                    ],
+                    "tokens": [
+                        {
+                            "$id": "60691bf5d4f03",
+                            "$collection": "tokens",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f"
+                                ]
+                            },
+                            "userId": "60691b6d8d45f",
+                            "type": 1,
+                            "secret": "e922fc41d16961bc25e53193954131aa080c9e3b22bf9f560d7509b5df85acd1",
+                            "expire": 1649037173,
+                            "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+                            "ip": "172.18.0.1",
+                            "countryCode": "--",
+                            "osCode": "LIN",
+                            "osName": "GNU/Linux",
+                            "osVersion": "",
+                            "clientType": "browser",
+                            "clientCode": "CH",
+                            "clientName": "Chrome",
+                            "clientVersion": "89.0",
+                            "clientEngine": "Blink",
+                            "clientEngineVersion": "",
+                            "deviceName": "desktop",
+                            "deviceBrand": "",
+                            "deviceModel": ""
+                        },
+                        {
+                            "$id": "606961cfc3c94",
+                            "$collection": "tokens",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f"
+                                ]
+                            },
+                            "userId": "60691b6d8d45f",
+                            "type": 1,
+                            "secret": "df3c75fd0f1b0cea4c28d8eab1018959dd881abc723107b1ab2245ef0a98328d",
+                            "expire": 1649055055,
+                            "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+                            "ip": "172.18.0.1",
+                            "countryCode": "--",
+                            "osCode": "LIN",
+                            "osName": "GNU/Linux",
+                            "osVersion": "",
+                            "clientType": "browser",
+                            "clientCode": "CH",
+                            "clientName": "Chrome",
+                            "clientVersion": "89.0",
+                            "clientEngine": "Blink",
+                            "clientEngineVersion": "",
+                            "deviceName": "desktop",
+                            "deviceBrand": "",
+                            "deviceModel": ""
+                        }
+                    ],
+                    "sessions": [
+                        {
+                            "$id": "607838909c4b3",
+                            "$permissions": {
+                                "read": [
+                                    "user:60691b6d8d45f"
+                                ],
+                                "write": [
+                                    "user:60691b6d8d45f"
+                                ]
+                            },
+                            "$collection": "sessions",
+                            "userId": "60691b6d8d45f",
+                            "provider": "email",
+                            "providerUid": "test@testme.com",
+                            "secret": "d30e060e85b999b22a892f36dc8f04a00404e795384a26e53a66a5de75f5aee9",
+                            "expire": 1650027536,
+                            "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36",
+                            "ip": "172.18.0.1",
+                            "countryCode": "--",
+                            "osCode": "LIN",
+                            "osName": "GNU/Linux",
+                            "osVersion": "",
+                            "clientType": "browser",
+                            "clientCode": "CH",
+                            "clientName": "Chrome",
+                            "clientVersion": "89.0",
+                            "clientEngine": "Blink",
+                            "clientEngineVersion": "",
+                            "deviceName": "desktop",
+                            "deviceBrand": "",
+                            "deviceModel": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "file": "/usr/src/code/vendor/utopia-php/framework/src/App.php",
+            "line": 567,
+            "function": "{closure}",
+            "args": [
+                "test@testme.com",
+                "testtest",
+                {},
+                {},
+                {},
+                {
+                    "default": "en"
+                },
+                {},
+                {}
+            ]
+        },
+        {
+            "file": "/usr/src/code/vendor/utopia-php/framework/src/App.php",
+            "line": 661,
+            "function": "execute",
+            "class": "Utopia\\App",
+            "type": "->",
+            "args": [
+                {},
+                {
+                    "email": "test@testme.com",
+                    "password": "testtest"
+                }
+            ]
+        },
+        {
+            "file": "/usr/src/code/app/http.php",
+            "line": 103,
+            "function": "run",
+            "class": "Utopia\\App",
+            "type": "->",
+            "args": [
+                {},
+                {}
+            ]
+        }
+    ]
+}
