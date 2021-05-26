@@ -5,7 +5,7 @@ import { appwrite, Server } from '../../store/global';
 
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { jwt } = req.query
+  const { jwt } = req.headers
   const payload = JSON.parse(req.body || null);
 
   if (!jwt) {
@@ -31,6 +31,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       case "DELETE":
         res.status(200).json(await appwrite.database.deleteDocument(Server.collectionID, payload.todo.$id));
         break;
+
       default:
         res.send(true)
         break;

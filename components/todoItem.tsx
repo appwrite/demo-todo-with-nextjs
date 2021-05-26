@@ -11,8 +11,11 @@ const TodoItem = ({ item }) => {
 
     const toggle = async (item) => {
         const jwt = await getJWT();
-        await fetch('/api/todos?jwt=' + jwt, {
+        await fetch('/api/todos', {
             method: 'PATCH',
+            headers: {
+                JWT: jwt
+            },
             body: JSON.stringify({
                 user: user.$id,
                 todo: {
@@ -29,8 +32,11 @@ const TodoItem = ({ item }) => {
 
     const handleDelete = async () => {
         const jwt = await getJWT();
-        await fetch('/api/todos?jwt=' + jwt, {
+        await fetch('/api/todos', {
             method: 'DELETE',
+            headers: {
+                JWT: jwt
+            },
             body: JSON.stringify({
                 user: user.$id,
                 todo: {

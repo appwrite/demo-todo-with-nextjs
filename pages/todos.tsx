@@ -17,8 +17,11 @@ const Todo = () => {
     const addTodo = async (e: FormEvent<EventTarget>) => {
         e.preventDefault();
         const jwt = await getJWT();
-        const res = await fetch('/api/todos?jwt=' + jwt, {
+        const res = await fetch('/api/todos', {
             method: 'post',
+            headers: {
+                JWT: jwt
+            },
             body: JSON.stringify({
                 user: user.$id,
                 todo: {
@@ -43,7 +46,11 @@ const Todo = () => {
     useEffect(() => {
         const fetchData = async () => {
             const jwt = await getJWT();
-            const res = await fetch('/api/todos?jwt=' + jwt)
+            const res = await fetch('/api/todos', {
+                headers: {
+                    JWT: jwt
+                }
+            });
             const json = await res.json()
             setTodos(json.documents);
             setIsLoading(false);
