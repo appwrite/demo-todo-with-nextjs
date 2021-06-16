@@ -7,7 +7,6 @@ import { appwrite, userState } from "../store/global";
 import { useRecoilState } from "recoil";
 
 const Login = () => {
-    // “A good programmer is someone who always looks both ways before crossing a one-way street.”
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [alert, setAlert] = useState("");
