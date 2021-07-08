@@ -5,7 +5,6 @@ import Alert from "../components/alert";
 import { appwrite } from "../store/global";
 
 const SignUp = () => {
-    // “Deleted code is debugged code.”
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
