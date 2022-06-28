@@ -12,7 +12,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  appwrite.setJWT(jwt.toString());
+  appwrite.account.client.setJWT(jwt.toString());
 
   try {
     switch (req.method.toUpperCase()) {

@@ -5,6 +5,7 @@ import Alert from "../components/alert";
 import { useRouter } from "next/router";
 import { appwrite, userState } from "../store/global";
 import { useRecoilState } from "recoil";
+import { User } from '../store/types';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ const Login = () => {
     const login = async (e: FormEvent<EventTarget>) => {
         e.preventDefault();
         try {
-            setUser(await appwrite.account.createSession(email, password));
+            setUser(await appwrite.account.createEmailSession(email, password) as unknown as User);
             router.push("/todos");
         } catch (error) {
             setAlert(error.message);
