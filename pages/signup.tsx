@@ -14,7 +14,7 @@ const SignUp = () => {
     const signup = async (e: FormEvent<EventTarget>) => {
         e.preventDefault();
         try {
-            await appwrite.account.create(email, password, name);
+            await appwrite.account.create('unique()', email, password, name);
             router.push("/todos");
         } catch (error) {
             setAlert(error.message);            
