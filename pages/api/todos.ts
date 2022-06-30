@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         break;
 
       case "POST":
-        res.status(200).json(await appwrite.database.createDocument(Server.collectionID, payload.todo, [`user:${payload.user}`], [`user:${payload.user}`]));
+        res.status(200).json(await appwrite.database.createDocument(Server.collectionID, 'unique()', payload.todo, [`user:${payload.user}`], [`user:${payload.user}`]));
         break;
 
       case "PATCH":
