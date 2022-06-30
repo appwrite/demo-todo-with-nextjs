@@ -2,19 +2,23 @@ import { FormEvent, useState } from "react";
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import Alert from "../components/alert";
-import { appwrite } from "../store/global";
+import { appwrite, userState } from "../store/global";
+import { useRecoilState } from 'recoil';
+import { User } from '../store/types';
 
 const SignUp = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [alert, setAlert] = useState("");
+    const [user, setUser] = useRecoilState(userState);
     const router = useRouter();
 
     const signup = async (e: FormEvent<EventTarget>) => {
         e.preventDefault();
         try {
             await appwrite.account.create('unique()', email, password, name);
+            setUser(await appwrite.account.createEmailSession(email, password) as unknown as User);
             router.push("/todos");
         } catch (error) {
             setAlert(error.message);            
