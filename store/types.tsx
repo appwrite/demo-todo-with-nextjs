@@ -1,4 +1,4 @@
-import type { Appwrite } from "appwrite";
+import type { Client as Appwrite } from "appwrite";
 
 type Todo = {
     $id?: string;

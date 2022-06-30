@@ -7,7 +7,7 @@ export const getJWT = async () => {
         return jwt;
     } else {
         try {
-            setJWT((await appwrite.account.createJWT<{jwt: string}>()).jwt);
+            setJWT((await appwrite.account.createJWT()).jwt);
             return await getJWT();
         } catch (error) {
             return null;

@@ -44,7 +44,8 @@ You have two options to deploy the front-end and we will cover both of them here
 
 * REACT_APP_ENDPOINT - Your Appwrite endpoint
 * REACT_APP_PROJECT - Your Appwrite project ID
-* REACT_APP_COLLECTION_ID - Your Appwrite collection ID 
+* REACT_APP_COLLECTION_ID - Your Appwrite collection ID
+* REACT_APP_DATABASE_ID - Your Appwrite database ID
 
 ### **Deploy to a Static Hosting Provider**
 
